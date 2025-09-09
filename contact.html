@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Maxence Gambier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- MENU -->
+  <header class="header">
+    <div class="logo">Maxence Gambier</div>
+    <div class="menu-hamburger" id="menu-btn">&#9776;</div>
+  </header>
+
+  <!-- MENU HAMBURGER -->
+  <nav class="side-menu" id="side-menu">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENU CONTACT -->
+  <section class="contact-section">
+    <h1>Contactez-moi</h1>
+    <p>Vous pouvez me joindre par formulaire, ou directement via mes coordonnées :</p>
+
+    <ul>
+      <li>Email : <a href="mailto:m.gambier.contact@gmail.com">m.gambier.contact@gmail.com</a></li>
+      <li>Téléphone : <a href="tel:+33767497266">07 67 49 72 66</a> / <a href="tel:+33661047090">06 61 04 70 90</a></li>
+      <li>LinkedIn : <a href="https://www.linkedin.com/in/m-gambier/" target="_blank">linkedin.com/in/m-gambier</a></li>
+    </ul>
+
+    <form action="https://formsubmit.co/m.gambier.contact@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn">Envoyer</button>
+      <input type="hidden" name="_next" value="https://ton-site.github.io/merci.html">
+      <input type="hidden" name="_captcha" value="false">
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

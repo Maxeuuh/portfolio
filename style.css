@@ -1,0 +1,245 @@
+/* ================== RESET DE BASE ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ================== HEADER ================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #00264b;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo { 
+  font-size: 1.5rem; 
+  font-weight: bold; 
+}
+
+.menu-hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+
+/* ================== MENU COULISSANT ================== */
+.side-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #00264b;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 20;
+  position: fixed;
+}
+
+.side-menu .close-btn {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.side-menu ul { list-style: none; padding: 0; }
+.side-menu ul li a {
+  display: block;
+  padding: 15px 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.side-menu ul li a:hover { 
+  background-color: #0066cc; 
+}
+
+/* ================== HERO ================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(-45deg, #003366, #004080, #0050a0, #0066cc);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color: white;
+}
+
+
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ================== BOUTON ================== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #00264b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-top: 1.5rem;
+}
+
+.btn:hover {
+  background-color: #004080;
+}
+
+/* ================== MEDIA QUERIES ================== */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content h2 { font-size: 1.2rem; }
+  .hero-content p { font-size: 1rem; }
+  .btn { padding: 0.5rem 1.5rem; font-size: 0.9rem; }
+  .side-menu ul li a { font-size: 1.2rem; padding: 12px 20px; }
+  .side-menu .close-btn { font-size: 1.8rem; top: 10px; right: 15px; }
+}
+
+/* ================== FORMULAIRE CONTACT ================== */
+.contact-section {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #0066cc; /* Bleu foncé cohérent avec le hero */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Police uniforme */
+}
+
+.contact-section h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.contact-section p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.contact-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-section ul li a {
+  color: #66c2ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-section ul li a:hover {
+  color: #99d6ff;
+}
+
+/* Champs et textarea */
+.contact-section input,
+.contact-section textarea {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+  width: 100%;          /* champs prennent toute la largeur */
+  display: block;       /* empilé */
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* Placeholder */
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  font-family: 'Arial', sans-serif;
+  color: #ddd;
+}
+
+/* Bouton identique à la page d'accueil */
+.contact-section button.btn {
+  padding: 0.8rem 2rem;
+  background-color: #00264b;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+
+.contact-section button.btn:hover {
+  background-color: #004080;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .contact-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
+
+  .contact-section input,
+  .contact-section textarea {
+    font-size: 0.95rem;
+  }
+}
+
