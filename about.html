@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxence Gambier - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Maxence Gambier</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- MENU -->
+  <!-- MENU -->
     <header class="header">
         <div class="logo">Maxence Gambier</div>
         <div class="menu-hamburger" id="menu-btn">&#9776;</div>
@@ -25,6 +25,134 @@
         </ul>
     </nav>
 
-    <script src="script.js"></script>
+    <section class="about-intro fade-in">
+      <img src="images/data.jpg" alt="Photo Maxence" class="about-photo">
+      <div class="about-text">
+        <h1>À propos de moi</h1>
+        <p>Je m’appelle <strong>Maxence Gambier</strong>, jeune diplômé en Réseaux et Télécommunications. 
+        Passionné par l’administration systèmes & réseaux et curieux d’explorer de nouveaux environnements, 
+        j’ai eu l’opportunité d’étudier en France et au Canada, et de participer à divers projets académiques et associatifs.</p>
+      </div>
+    </section>
+
+  <section class="about-section">
+    <h2>Mon Parcours</h2>
+    <div class="timeline">
+
+      <!-- Bac STI2D -->
+      <div class="timeline-item fade-in">
+        <h3>Lycée Édouard Belin</h3>
+        <p><strong>Bac STI2D – Spécialité SIN</strong> (09/2019 – 06/2022) – Vesoul</p>
+        <p>Formation technologique orientée vers la création et la conception de solutions innovantes. 
+        Spécialité <em>Systèmes d’information et numérique</em> : traitement de l’information, pilotage de produits communicants, 
+        intégration matérielle et logicielle, conception de prototypes et maquettes virtuelles.</p>
+        <p class="diploma-result">🎓 Diplôme obtenu en 2022 – Mention Assez Bien</p>
+        <a href="https://www.onisep.fr/ressources/univers-formation/formations/lycees/bac-techno-sti2d-sciences-et-technologies-de-l-industrie-et-du-developpement-durable-enseignement-specifique-systemes-d-information-et-numerique" 
+          target="_blank" class="timeline-link">🔗 En savoir plus</a>
+      </div>
+
+      <!-- BUT Réseaux & Télécoms -->
+      <div class="timeline-item fade-in">
+        <h3>IUT Nord Franche-Comté</h3>
+        <p><strong>BUT Réseaux & Télécommunications</strong> (09/2022 – 06/2025) – Montbéliard</p>
+        <p>Diplôme Bac+3 formant des spécialistes capables de configurer, sécuriser et maintenir des systèmes d’information et réseaux IP. 
+        Enseignements : administration Linux/Windows, Cisco CCNA, virtualisation, cybersécurité et RGPD. 
+        Développement de compétences humaines : travail en équipe, éthique et communication.</p>
+        <p class="diploma-result">🎓 Diplôme obtenu en 2025</p>
+        <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/but-reseaux-et-telecommunications-parcours-cybersecurite" 
+          target="_blank" class="timeline-link">🔗 En savoir plus</a>
+      </div>
+
+      <!-- UQAC -->
+      <div class="timeline-item fade-in">
+        <h3>UQAC – Université du Québec à Chicoutimi</h3>
+        <p><strong>Mobilité internationale – Baccalauréat en informatique</strong> (08/2024 – 05/2025) – Canada</p>
+        <p>Programme orienté sur les standards ACM et IEEE, formant des spécialistes capables de résoudre des problématiques variées en informatique. 
+        Cours suivis dans les domaines de la cybersécurité défensive, du développement logiciel, du cloud et de la programmation web/mobile. 
+        Expérience internationale favorisant l’adaptabilité et l’ouverture culturelle.</p>
+        <p class="diploma-result">🎓 Diplôme obtenu en 2025</p>
+        <a href="https://www.uqac.ca/programme/7833-baccalaureat-en-informatique/" 
+          target="_blank" class="timeline-link">🔗 En savoir plus</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Expériences -->
+  <section class="about-section">
+    <h2>Mes Expériences</h2>
+    <div class="cards">
+
+      <!-- Stage Assistant de Recherche -->
+      <div class="card fade-in">
+        <h3>Assistant de Recherche Informatique</h3>
+        <p class="job-company">Laboratoire d’informatique formelle <span class="job-school">UQAC</span></p>
+        <p class="job-location">Chicoutii; Québec, Canada</p>
+        <p class="job-date">(02/2025 – 05/2025)</p>
+        <ul>
+          <li>Développement d’outils pour l’analyse de données</li>
+          <li>Participation à un projet de recherche appliquée en cybersécurité et systèmes distribués</li>
+          <li>Scripts Python et SQL pour automatiser des traitements</li>
+          <li>Mise en place d’un environnement réseau sécurisé</li>
+        </ul>
+      </div>
+
+      <!-- Stage CAF du Doubs -->
+      <div class="card fade-in">
+        <h3>Développeur Application Cybersécurité</h3>
+        <p class="job-company">CAF du Doubs</p>
+        <p class="job-location">Montbéliard, France</p>
+        <p class="job-date">(04/2024 – 06/2024)</p>
+        <ul>
+          <li>Découverte du fonctionnement d’un système d’information en entreprise</li>
+          <li>Développement d’une application web en PHP Symfony pour le suivi de la sécurité informatique</li>
+          <li>Présentation et formation des utilisateurs à l’outil</li>
+        </ul>
+      </div>
+
+      <!-- Colruyt -->
+      <div class="card fade-in">
+        <h3>Employé Polyvalent (Saisonnier)</h3>
+        <p class="job-company">Colruyt</p>
+        <p class="job-location">Champagney, France</p>
+        <p class="job-date">(07/2024 – 08/2024 & 06/2025 – 09/2025)</p>
+        <ul>
+          <li>Mise en rayon, encaissement et conseil client</li>
+          <li>Gestion des stocks et contrôle des prix</li>
+          <li>Travail en équipe dans un environnement dynamique</li>
+        </ul>
+      </div>
+
+      <!-- Parc animalier -->
+      <div class="card fade-in">
+        <h3>Employé Polyvalent (Saisonnier)</h3>
+        <p class="job-company">Parc animalier Guiguitte en Folie</p>
+        <p class="job-location">Filain, France</p>
+        <p class="job-date">(04/2023 & 07/2023 – 09/2023)</p>
+        <ul>
+          <li>Préparation et service en cuisine</li>
+          <li>Accueil, service et encaissement client</li>
+          <li>Nettoyage et entretien des espaces</li>
+        </ul>
+      </div>
+
+      <!-- Pizz'Alex -->
+      <div class="card fade-in">
+        <h3>Assistant Restauration</h3>
+        <p class="job-company">Pizz’Alex (Activité familiale)</p>
+        <p class="job-location">Haute-Saône, France</p>
+        <p class="job-date">(09/2020 – 01/2023)</p>
+        <ul>
+          <li>Préparation des commandes et cuisson des pizzas</li>
+          <li>Encaissement et service client</li>
+          <li>Hygiène et remise en ordre du poste de travail</li>
+          <li>Commis de cuisine</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>

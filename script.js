@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // TEXTE ANIMÉ (uniquement si présent)
+  // ===================== TEXTE ANIMÉ =====================
   const welcomeTextEl = document.getElementById("welcome-text");
   if (welcomeTextEl) {
     const text = "Bienvenue sur mon portfolio !";
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typeWriter();
   }
 
-  // MENU HAMBURGER
+  // ===================== MENU HAMBURGER =====================
   const menuBtn = document.getElementById('menu-btn');
   const sideMenu = document.getElementById('side-menu');
   const closeBtn = document.getElementById('close-btn');
@@ -43,4 +43,50 @@ document.addEventListener('DOMContentLoaded', () => {
       if (sideMenu) sideMenu.style.width = '0';
     });
   });
+
+  // ===================== ANIMATIONS FADE-IN =====================
+  const fadeIns = document.querySelectorAll('.fade-in');
+
+  function checkFadeIn() {
+    const triggerBottom = window.innerHeight * 0.85;
+    fadeIns.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < triggerBottom) {
+        el.classList.add('show');
+      } else {
+        el.classList.remove('show'); // permet que ça reparte quand on reslide
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkFadeIn);
+  checkFadeIn(); // lancer une fois au chargement
+
+  // ===================== UNIFORMISER LA HAUTEUR DES CARTES =====================
+  function setEqualCardHeights() {
+    const cards = document.querySelectorAll('.cards .card');
+    let maxHeight = 0;
+
+    // Reset des hauteurs pour recalculer
+    cards.forEach(card => {
+      card.style.height = 'auto';
+    });
+
+    // Cherche la plus grande hauteur
+    cards.forEach(card => {
+      if (card.offsetHeight > maxHeight) {
+        maxHeight = card.offsetHeight;
+      }
+    });
+
+    // Applique la plus grande à toutes les cartes
+    cards.forEach(card => {
+      card.style.height = maxHeight + 'px';
+    });
+  }
+
+  // Appliquer au chargement + au resize
+  window.addEventListener('load', setEqualCardHeights);
+  window.addEventListener('resize', setEqualCardHeights);
+
 });
