@@ -327,14 +327,6 @@ html, body {
   line-height: 1.6;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #00264b; /* ✅ ton bleu préféré */
-  text-align: left; /* pour bien aligner avec la timeline */
-  padding-left: 2rem; /* un petit décalage harmonieux */
-}
-
 /* ===== CARTES EXPÉRIENCES — 3 par ligne, dernière ligne centrée ===== */
 .cards {
   display: flex;
@@ -404,14 +396,15 @@ html, body {
 }
 
 .cards .card ul {
-  padding-left: 1.2rem;
+  text-align: left;      /* ✅ aligne les puces à gauche */
+  padding-left: 1.5rem;  /* ✅ espace correct entre bord et puces */
   margin: 0;
   color: #444;
 }
 
 .cards .card ul li {
-  margin-bottom: 0.4rem;
-  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 /* Sous-infos dans les cartes */
@@ -444,4 +437,58 @@ html, body {
   font-weight: normal; /* un peu plus léger si tu veux */
   font-size: 0.9rem;
   color: #555;
+}
+
+/* ================== SECTION COMPETENCES ================== */
+.skills-section {
+  padding: 3rem 1rem;
+}
+
+.skills-container {
+  max-width: 1100px;  /* même largeur que les cartes */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills-intro {
+  max-width: 900px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* ================== SECTIONS GÉNÉRALES ================== */
+section {
+  padding-top: 2rem;   /* espace régulier sous le header */
+}
+
+/* Titres About & Skills */
+.about-section h2,
+.skills-container h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0 2rem 0;   /* ✅ réduit l’espace au-dessus */
+  color: #00264b;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;      /* espace pour le trait */
+}
+
+/* Trait bleu sous les titres */
+.about-section h2::after,
+.skills-container h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #00264b;
+  margin: 1rem auto 0 auto;  /* centré sous le titre */
+  border-radius: 2px;
+}
+
+.about-section {
+  margin-top: 0;            /* supprime le gros vide ajouté par défaut */
+  padding-top: 1rem;        /* petit espace pour respirer */
 }
